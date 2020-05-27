@@ -1,0 +1,13 @@
+com\leyou\item\entity\ActivityLotteryTemplate.class
+com\leyou\item\entity\ActivitySolidAwardYard.class
+com\leyou\item\entity\ActivityLotteryNumber.class
+com\leyou\item\mapper\ActivitySolidAwardYardMapper.class
+com\leyou\item\enums\ActivitySolidAwardYardTypes.class
+com\leyou\item\entity\ActivityLotteryPrize.class
+com\leyou\item\biz\ActivitySolidAwardYardBiz.class
+com\leyou\item\biz\ActivitySolidAwardBiz.class
+com\leyou\LyItemApplication.class
+com\leyou\item\controller\ActivitySolidAwardYardController.class
+com\leyou\item\mapper\ActivitySolidAwardMapper.class
+com\leyou\item\entity\ActivitySolidAward.class
+com\leyou\item\controller\ActivitySolidAwardController.class

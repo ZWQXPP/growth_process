@@ -1,0 +1,13 @@
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\LyItemApplication.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\entity\ActivitySolidAward.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\mapper\ActivitySolidAwardYardMapper.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\biz\ActivitySolidAwardBiz.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\controller\ActivitySolidAwardController.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\entity\ActivityLotteryNumber.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\entity\ActivityLotteryPrize.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\entity\ActivityLotteryTemplate.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\biz\ActivitySolidAwardYardBiz.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\controller\ActivitySolidAwardYardController.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\entity\ActivitySolidAwardYard.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\enums\ActivitySolidAwardYardTypes.java
+D:\ly_parent\ly_item\ly_item_service\src\main\java\com\leyou\item\mapper\ActivitySolidAwardMapper.java
