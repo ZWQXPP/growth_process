@@ -17,7 +17,7 @@ import java.util.Date;
 public class ActivitySolidAwardYardBiz {
 
     @Autowired
-    private ActivitySolidAwardYardMapper awardYardMapper;
+    private  ActivitySolidAwardYardMapper awardYardMapper;
 
         public void addYard(ActivitySolidAwardYardVo activitySolidAwardYardVo) {
         checkAwardYard(activitySolidAwardYardVo);
