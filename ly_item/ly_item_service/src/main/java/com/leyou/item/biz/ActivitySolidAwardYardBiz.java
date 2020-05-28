@@ -36,8 +36,9 @@ public class ActivitySolidAwardYardBiz {
     }
 
     private void checkAwardYard(ActivitySolidAwardYardVo activitySolidAwardYardVo) {
+            //详情
         ActivitySolidAwardYard activitySolidAwardYard = awardYardMapper.selectByPrimaryKey(activitySolidAwardYardVo.getId());
-
+        //判断验证码是否为空
         if (activitySolidAwardYard == null){
             if (activitySolidAwardYardVo.getActivitySolidAwardId()==null){
                 throw new ServiceException("实体奖品ID不为空");
