@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/activity/award")
 public class ActivitySolidAwardController extends ActivitySolidAwardBiz {
-    @Autowired ActivitySolidAwardBiz activitySolidAwardBiz;
+    @Autowired
+    private ActivitySolidAwardBiz activitySolidAwardBiz;
     @GetMapping("/find")
     public ActivitySolidAward findAward(@RequestParam String id){
         ActivitySolidAward award = activitySolidAwardBiz.findAward(id);
-
         return award;
     }
 }
