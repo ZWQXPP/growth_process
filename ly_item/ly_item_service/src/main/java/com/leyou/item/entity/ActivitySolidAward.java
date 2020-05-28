@@ -1,6 +1,7 @@
 package com.leyou.item.entity;
 
 
+import com.leyou.common.entity.BaseEntity;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -12,8 +13,7 @@ import java.util.Date;
  * @date 2020/3/13
  */
 @Data
-public class ActivitySolidAward {
-    private String id;
+public class ActivitySolidAward extends BaseEntity {
 
     /**
      * @Fields :  实体奖品名称

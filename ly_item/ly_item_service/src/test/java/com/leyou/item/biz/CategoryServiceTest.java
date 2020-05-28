@@ -12,8 +12,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.xml.crypto.Data;
-import java.util.Date;
-import java.util.List;
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = LyItemApplication.class)
@@ -40,5 +41,32 @@ public class CategoryServiceTest {
         activitySolidAwardYard.setUpdatedBy("李四234");
         activitySolidAwardYardBiz.addYard(activitySolidAwardYard);
         System.out.println(activitySolidAwardYard);
+    }
+
+    @Test
+    public void addAward(){
+        ActivitySolidAward award = new ActivitySolidAward();
+        award.setName("夹心面包");
+        award.setPreissueNum(188);
+        award.setPrice(new BigDecimal("50"));
+        award.setImageUrls("na34yhyygq23uuvhf");
+        award.setType(3);
+        award.setBranchId("321");
+        award.setBranchName("绿地店234");
+        award.setVideoPlatform(2);
+        award.setTypeTime(2);
+        award.setStartTime(new Date());
+        award.setCreatedBy("尊上");
+        award.setUpdatedBy("一一");
+        //时间推一个月
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(date);
+        calendar.add(Calendar.MONTH, 1); //把日期往后增加一个月，整数往后推，负数往前移
+        date = calendar.getTime();
+        // String stringDate = sdf.format(date);//date-->String
+        award.setEndTime(date);
+        activitySolidAwardBiz.andAward(award);
     }
 }
