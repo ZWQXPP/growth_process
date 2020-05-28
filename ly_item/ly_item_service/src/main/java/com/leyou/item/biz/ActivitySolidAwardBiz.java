@@ -13,7 +13,15 @@ public class ActivitySolidAwardBiz  {
     private ActivitySolidAwardMapper activitySolidAwardMapper;
 
     public ActivitySolidAward findAward(String id) {
-
         return  activitySolidAwardMapper.selectAward(id);
+    }
+
+    /**
+     * @Description: 奖品添加
+     * @auther: zwq
+     * @date: 2020/5/28 0028 下午 2:13
+     */
+    public void andAward() {
+
     }
 }
