@@ -37,6 +37,7 @@ public class ActivitySolidAwardYardBiz {
 
     private void checkAwardYard(ActivitySolidAwardYardVo activitySolidAwardYardVo) {
         ActivitySolidAwardYard activitySolidAwardYard = awardYardMapper.selectByPrimaryKey(activitySolidAwardYardVo.getId());
+
         if (activitySolidAwardYard == null){
             if (activitySolidAwardYardVo.getActivitySolidAwardId()==null){
                 throw new ServiceException("实体奖品ID不为空");
@@ -46,6 +47,7 @@ public class ActivitySolidAwardYardBiz {
             }
             activitySolidAwardYardVo.setId(UUIDUtils.generateUuid());
             activitySolidAwardYardVo.setType(ActivitySolidAwardYardTypes.ZERO.getType());
+
         }else {
             if (StringUtils.isBlank(activitySolidAwardYardVo.getUpdatedBy())){
                 throw new  ServiceException("beizhu修改人");
