@@ -30,7 +30,6 @@ public class ActivitySolidAwardBiz  {
      */
     public void andAward(ActivitySolidAward activitySolidAward) {
         checkAward(activitySolidAward);
-
         activitySolidAward.setDeleted(false);
         activitySolidAward.setUpdatedTime(new Date());
         activitySolidAward.setCreatedTime(new Date());
@@ -40,52 +39,52 @@ public class ActivitySolidAwardBiz  {
     private void checkAward(ActivitySolidAward activitySolidAward) {
         //较验
         activitySolidAward.setId(UUIDUtils.generateUuid());
-        if (StringUtils.isBlank(activitySolidAward.getName())){
+        if (StringUtils.isBlank(activitySolidAward.getName())) {
             throw new ServiceException("奖品名称不为空");
         }
         //preissueNum
-        if (activitySolidAward.getPreissueNum()==null){
+        if (activitySolidAward.getPreissueNum() == null) {
             throw new ServiceException("预发数量不为空");
         }
         //预发数量==剩余数量
-        if (activitySolidAward.getSurplusNum()==null){
-            activitySolidAward.setSurplusNum(activitySolidAward.getPreissueNum()) ;
+        if (activitySolidAward.getSurplusNum() == null) {
+            activitySolidAward.setSurplusNum(activitySolidAward.getPreissueNum());
         }
-        if (activitySolidAward.getPrice()==null || activitySolidAward.getPrice().compareTo(BigDecimal.ZERO)<=0){
+        if (activitySolidAward.getPrice() == null || activitySolidAward.getPrice().compareTo(BigDecimal.ZERO) <= 0) {
             throw new ServiceException("单品价格不为空");
         }
-        if (StringUtils.isBlank(activitySolidAward.getImageUrls())){
+        if (StringUtils.isBlank(activitySolidAward.getImageUrls())) {
             throw new ServiceException("图片地址不为空");
         }
         //奖品类型 1. 实物 2. 游戏 3. 酒店 4. 第三方合作 5.充值卡
-        if (activitySolidAward.getType()==null){
+        if (activitySolidAward.getType() == null) {
             throw new ServiceException("奖品类型不为空");
         }
-        if (StringUtils.isBlank(activitySolidAward.getBranchId())){
+        if (StringUtils.isBlank(activitySolidAward.getBranchId())) {
             throw new ServiceException("门店id不为空");
         }
-        if (StringUtils.isBlank(activitySolidAward.getBranchName())){
+        if (StringUtils.isBlank(activitySolidAward.getBranchName())) {
             throw new ServiceException("门店名称不为空");
         }
         // 视频平台 1. 爱奇艺 2. 腾讯视频 3.优酷会员
-        if (activitySolidAward.getVideoPlatform()==null){
+        if (activitySolidAward.getVideoPlatform() == null) {
             throw new ServiceException("选择 视频平台 1. 爱奇艺 2. 腾讯视频 3.优酷会员");
         }
-        if (activitySolidAward.getTypeTime()==null){
+        if (activitySolidAward.getTypeTime() == null) {
             throw new ServiceException("选择 时间类型 1.周卡 2. 月卡 3.年卡");
         }
-        if (activitySolidAward.getStartTime()==null){
+        if (activitySolidAward.getStartTime() == null) {
             throw new ServiceException("兑换开始时间");
         }
-        if (activitySolidAward.getEndTime()==null){
+        if (activitySolidAward.getEndTime() == null) {
             throw new ServiceException("兑换结束时间");
         }
         //兑换码类型 1. 系统兑换码 2. 视频会员兑换码
-       activitySolidAward.setRedeemCodeType(1);
-        if (StringUtils.isBlank(activitySolidAward.getCreatedBy())){
+        activitySolidAward.setRedeemCodeType(1);
+        if (StringUtils.isBlank(activitySolidAward.getCreatedBy())) {
             throw new ServiceException("创建人不为空");
         }
-        if (StringUtils.isBlank(activitySolidAward.getUpdatedBy())){
+        if (StringUtils.isBlank(activitySolidAward.getUpdatedBy())) {
             throw new ServiceException("修改人不为空");
         }
     }
