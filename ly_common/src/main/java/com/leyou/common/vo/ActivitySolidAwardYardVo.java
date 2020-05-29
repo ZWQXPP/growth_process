@@ -1,8 +1,5 @@
 package com.leyou.common.vo;
 
-import com.leyou.common.base.BaseVo;
-
-import com.leyou.common.entity.BaseEntity;
 import lombok.Data;
 
 import java.math.BigDecimal;

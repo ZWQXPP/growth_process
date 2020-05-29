@@ -60,4 +60,12 @@ public class ActivitySolidAwardYardBiz {
             activitySolidAwardYardVo.setType(ActivitySolidAwardYardTypes.ONE.getType());
         }
     }
+
+    public void updateYard(ActivitySolidAwardYardVo activitySolidAwardYardVo) {
+        ActivitySolidAwardYard awardYard = new ActivitySolidAwardYard();
+        awardYard.setActivitySolidAwardId(activitySolidAwardYardVo.getActivitySolidAwardId());
+        awardYard.setId(activitySolidAwardYardVo.getId());
+        awardYard.setType(activitySolidAwardYardVo.getType());
+        awardYardMapper.updateByPrimaryKeySelective(awardYard);
+    }
 }
