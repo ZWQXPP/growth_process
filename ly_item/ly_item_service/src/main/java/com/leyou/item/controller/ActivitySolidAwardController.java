@@ -22,7 +22,7 @@ public class ActivitySolidAwardController extends ActivitySolidAwardBiz {
      * @date: 2020/5/28 0028 下午 2:13
      */
     @PostMapping("/add")
-    public void addAward(){
-        activitySolidAwardBiz.andAward();
+    public void addAward(@RequestBody ActivitySolidAward activitySolidAward){
+        activitySolidAwardBiz.andAward(activitySolidAward);
     }
 }

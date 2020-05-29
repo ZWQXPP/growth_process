@@ -4,6 +4,7 @@ package com.leyou.common.entity;
 import com.leyou.common.utils.DateUtils;
 import com.leyou.common.utils.StringUtils;
 
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,6 +36,9 @@ public abstract class BaseEntity implements Serializable {
     @Transient
     private String sortOrder;
 
+    public String getId() {
+        return id;
+    }
 
     public void setId(String id) {
         this.id = id;
