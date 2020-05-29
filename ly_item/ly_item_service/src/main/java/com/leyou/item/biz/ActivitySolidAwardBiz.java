@@ -19,7 +19,7 @@ public class ActivitySolidAwardBiz  {
     private ActivitySolidAwardMapper activitySolidAwardMapper;
 
     public ActivitySolidAward findAward(String id) {
-        return activitySolidAwardMapper.selectAward(id);
+        return this.activitySolidAwardMapper.selectAward(id);
     }
 
     /**

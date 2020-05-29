@@ -20,17 +20,20 @@ public class ActivitySolidAwardYardBiz {
     private ActivitySolidAwardYardMapper awardYardMapper;
 
     public void addYard(ActivitySolidAwardYardVo activitySolidAwardYardVo) {
-        checkAwardYard(activitySolidAwardYardVo);
-        ActivitySolidAwardYard activitySolidAwardYard = new ActivitySolidAwardYard();
-        activitySolidAwardYardVo.setDeleted(false);
-        activitySolidAwardYardVo.setUpdatedTime(new Date());
-        activitySolidAwardYardVo.setCreatedTime(new Date());
-        BeanUtils.copyProperties(activitySolidAwardYardVo, activitySolidAwardYard);
-        if (activitySolidAwardYard == null) {
-            awardYardMapper.insert(activitySolidAwardYard);
-        } else {
-            awardYardMapper.updateByPrimaryKeySelective(activitySolidAwardYard);
-        }
+
+            checkAwardYard(activitySolidAwardYardVo);
+            ActivitySolidAwardYard activitySolidAwardYard = new ActivitySolidAwardYard();
+            activitySolidAwardYardVo.setDeleted(false);
+            activitySolidAwardYardVo.setUpdatedTime(new Date());
+            activitySolidAwardYardVo.setCreatedTime(new Date());
+            BeanUtils.copyProperties(activitySolidAwardYardVo, activitySolidAwardYard);
+            if (activitySolidAwardYard == null) {
+                awardYardMapper.updateByPrimaryKeySelective(activitySolidAwardYard);
+            } else {
+                awardYardMapper.insert(activitySolidAwardYard);
+            }
+
+
     }
 
     private void checkAwardYard(ActivitySolidAwardYardVo activitySolidAwardYardVo) {

@@ -27,20 +27,21 @@ public class CategoryServiceTest {
     private ActivitySolidAwardYardBiz activitySolidAwardYardBiz;
 
     @Test
-    public void aVoid() {
-        ActivitySolidAward aa = activitySolidAwardBiz.findAward("34645");
+    public void findaa() {
+        ActivitySolidAward aa = activitySolidAwardBiz.findAward("654a161bed9645fcb7ccd8c916b838b7");
         System.out.println(aa);
     }
 
     @Test
     public void addYard() {
-        ActivitySolidAwardYardVo activitySolidAwardYard =new ActivitySolidAwardYardVo();
-        activitySolidAwardYard.setId("363f60fe91744e4ab2e0fac3a7f9a332");
-        activitySolidAwardYard.setActivitySolidAwardId("1456711221");
-        activitySolidAwardYard.setActivitySolidYard("aac11chdcss");
-        activitySolidAwardYard.setUpdatedBy("李四234");
-        activitySolidAwardYardBiz.addYard(activitySolidAwardYard);
-        System.out.println(activitySolidAwardYard);
+        ActivitySolidAwardYardVo activitySolidAwardYard = new ActivitySolidAwardYardVo();
+        for (int i = 0; i < 2; i++) {
+            activitySolidAwardYard.setId("363f60fe4ab2e0c3a7f9a332");
+            activitySolidAwardYard.setActivitySolidAwardId("1456711221");
+            activitySolidAwardYard.setActivitySolidYard("aac11chdcss");
+            activitySolidAwardYard.setUpdatedBy("尊上1");
+            activitySolidAwardYardBiz.addYard(activitySolidAwardYard);
+        }
     }
 
     @Test
@@ -68,5 +69,12 @@ public class CategoryServiceTest {
         // String stringDate = sdf.format(date);//date-->String
         award.setEndTime(date);
         activitySolidAwardBiz.andAward(award);
+    }
+@Test
+    public void main11() {
+        for (int i = 0; i < 10; i++) {
+
+            System.out.println(i);
+        }
     }
 }

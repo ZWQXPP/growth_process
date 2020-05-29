@@ -5,14 +5,24 @@ spring:
     name: item-service
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ly_sdx_tests?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/ly_sdx_tests?setUnicode=true&characterEncoding=utf8
     username: root
     password: root
+    #useUnicode=true&characterEncoding=UTF-8&useSSL=false
 eureka:
   client:
+    register-with-eureka: false
+    fetch-registry: false
     service-url:
       defaultZone: http://localhost:10086/eureka
     registry-fetch-interval-seconds: 5
+
+security:
+  basic:
+    enabled: false
+
+
+
 mybatis:
   mapper-locations: mapper/*.xml
   configuration:
