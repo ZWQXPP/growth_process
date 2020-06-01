@@ -25,4 +25,29 @@ public class ActivitySolidAwardController extends ActivitySolidAwardBiz {
     public void addAward(@RequestBody ActivitySolidAward activitySolidAward) {
         activitySolidAwardBiz.andAward(activitySolidAward);
     }
+    /**
+     * @Description: 方法是1
+     * @param:
+     * @return:
+     * @auther: zwq
+     * @date: 2020/6/1 0001 下午 4:16
+     */
+    @GetMapping
+    public void demo01 (@RequestParam ActivitySolidAward activitySolidAward){
+
+        System.out.println("测试001"+activitySolidAward);
+    }
+
+    /**
+     * @Description: 方法是2
+     * @param:
+     * @return:
+     * @auther: zwq
+     * @date: 2020/6/1 0001 下午 4:16
+     */
+    @GetMapping
+    public void demo02 (@RequestParam ActivitySolidAward activitySolidAward){
+
+        System.out.println("测试002"+activitySolidAward);
+    }
 }
