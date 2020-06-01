@@ -21,8 +21,6 @@ security:
   basic:
     enabled: false
 
-
-
 mybatis:
   mapper-locations: mapper/*.xml
   configuration:

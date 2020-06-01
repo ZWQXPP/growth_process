@@ -70,11 +70,16 @@ public class CategoryServiceTest {
         award.setEndTime(date);
         activitySolidAwardBiz.andAward(award);
     }
-@Test
-    public void main11() {
-        for (int i = 0; i < 10; i++) {
 
-            System.out.println(i);
+    @Test
+    public void updetaYard() {
+        ActivitySolidAwardYardVo activitySolidAwardYard = new ActivitySolidAwardYardVo();
+
+            activitySolidAwardYard.setId("09caf3f37ce04b23848eb8e6c37f21df");
+            activitySolidAwardYard.setActivitySolidAwardId("221");
+            activitySolidAwardYard.setType(1);
+            activitySolidAwardYardBiz.updateYard(activitySolidAwardYard);
         }
-    }
+
+
 }
