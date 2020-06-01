@@ -52,7 +52,7 @@ public class ActivitySolidAwardController extends ActivitySolidAwardBiz {
     }
 
     /**
-     * @Description: 方法是2
+     * @Description: 方法是3
      * @param:
      * @return:
      * @auther: zwq
