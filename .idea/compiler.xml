@@ -6,17 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ly_common" />
         <module name="ly_gateway" />
-        <module name="ly_registry" />
+        <module name="ly_common" />
         <module name="ly_item_service" />
         <module name="ly_item_pojo" />
+        <module name="ly_item_interface" />
+        <module name="ly_registry" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ly_common" target="1.8" />
       <module name="ly_gateway" target="1.8" />
       <module name="ly_item" target="1.8" />
+      <module name="ly_item_interface" target="1.8" />
       <module name="ly_item_pojo" target="1.8" />
       <module name="ly_item_service" target="1.8" />
       <module name="ly_parent" target="1.8" />
@@ -27,6 +29,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ly_common" options="-parameters" />
       <module name="ly_gateway" options="-parameters" />
+      <module name="ly_item_interface" options="-parameters" />
       <module name="ly_item_pojo" options="-parameters" />
       <module name="ly_item_service" options="-parameters" />
       <module name="ly_registry" options="-parameters" />

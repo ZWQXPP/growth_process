@@ -1,17 +1,13 @@
 package com.leyou.item.biz;
 
 import com.leyou.LyItemApplication;
-import com.leyou.common.vo.ActivitySolidAwardYardVo;
-import com.leyou.item.dto.CategoryDTO;
 import com.leyou.item.entity.ActivitySolidAward;
-import com.leyou.item.entity.ActivitySolidAwardYard;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.xml.crypto.Data;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.*;

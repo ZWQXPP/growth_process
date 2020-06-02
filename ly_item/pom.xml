@@ -15,6 +15,7 @@
     <modules>
         <module>ly_item_pojo</module>
         <module>ly_item_service</module>
+        <module>ly_item_interface</module>
     </modules>
 
 

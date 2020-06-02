@@ -3,13 +3,13 @@ package com.leyou.item.biz;
 import com.leyou.common.exception.ServiceException;
 import com.leyou.common.utils.StringUtils;
 import com.leyou.common.utils.UUIDUtils;
-import com.leyou.common.vo.ActivitySolidAwardYardVo;
 import com.leyou.item.entity.ActivitySolidAwardYard;
 import com.leyou.item.enums.ActivitySolidAwardYardTypes;
 import com.leyou.item.mapper.ActivitySolidAwardYardMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import serviceVo.ActivitySolidAwardYardVo;
 
 import java.util.Date;
 

@@ -1,6 +1,5 @@
 package com.leyou.item.controller;
 
-import com.leyou.common.vo.ActivitySolidAwardYardVo;
 import com.leyou.item.biz.ActivitySolidAwardYardBiz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

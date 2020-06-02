@@ -1,4 +1,4 @@
-package com.leyou.common.vo;
+package serviceVo;
 
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import java.util.Date;
  * @date 2020/3/13
  */
 @Data
-public class ActivitySolidAwardYardVo  {
+public class ActivitySolidAwardYardVo {
 
     /**
      * @Fields  : ID
