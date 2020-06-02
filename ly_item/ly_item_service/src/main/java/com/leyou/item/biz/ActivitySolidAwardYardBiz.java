@@ -71,4 +71,8 @@ public class ActivitySolidAwardYardBiz {
     }
 
 
+    public void deleteYard(ActivitySolidAwardYard activitySolidAwardYard) {
+        awardYardMapper.deleteYard(activitySolidAwardYard);
+
+    }
 }

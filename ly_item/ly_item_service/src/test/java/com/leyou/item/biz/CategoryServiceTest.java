@@ -2,6 +2,7 @@ package com.leyou.item.biz;
 
 import com.leyou.LyItemApplication;
 import com.leyou.item.entity.ActivitySolidAward;
+import com.leyou.item.entity.ActivitySolidAwardYard;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,15 +29,21 @@ public class CategoryServiceTest {
         ActivitySolidAward aa = activitySolidAwardBiz.findAward("654a161bed9645fcb7ccd8c916b838b7");
         System.out.println(aa);
     }
+    @Test
+    public void findyawrd() {
+        ActivitySolidAwardYard award = new ActivitySolidAwardYard();
+        award.setActivitySolidAwardId("1456711221");
+        activitySolidAwardYardBiz.deleteYard(award);
+    }
 
     @Test
     public void addYard() {
         ActivitySolidAwardYardVo activitySolidAwardYard = new ActivitySolidAwardYardVo();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 6; i++) {
             activitySolidAwardYard.setId("363f60fe4ab2e0c3a7f9a332");
             activitySolidAwardYard.setActivitySolidAwardId("1456711221");
             activitySolidAwardYard.setActivitySolidYard("aac11chdcss");
-            activitySolidAwardYard.setUpdatedBy("尊===上1");
+            activitySolidAwardYard.setUpdatedBy("尊上");
             activitySolidAwardYardBiz.addYard(activitySolidAwardYard);
         }
     }
