@@ -30,7 +30,7 @@ public class CategoryServiceTest {
         System.out.println(aa);
     }
     @Test
-    public void findyawrd() {
+    public void deleteYard() {
         ActivitySolidAwardYard award = new ActivitySolidAwardYard();
         award.setActivitySolidAwardId("1456711221");
         activitySolidAwardYardBiz.deleteYard(award);
