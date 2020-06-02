@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import serviceVo.ActivitySolidAwardYardVo;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -31,11 +32,11 @@ public class CategoryServiceTest {
     @Test
     public void addYard() {
         ActivitySolidAwardYardVo activitySolidAwardYard = new ActivitySolidAwardYardVo();
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 4; i++) {
             activitySolidAwardYard.setId("363f60fe4ab2e0c3a7f9a332");
             activitySolidAwardYard.setActivitySolidAwardId("1456711221");
             activitySolidAwardYard.setActivitySolidYard("aac11chdcss");
-            activitySolidAwardYard.setUpdatedBy("尊上1");
+            activitySolidAwardYard.setUpdatedBy("尊===上1");
             activitySolidAwardYardBiz.addYard(activitySolidAwardYard);
         }
     }

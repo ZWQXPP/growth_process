@@ -3,6 +3,7 @@ package com.leyou.item.controller;
 import com.leyou.item.biz.ActivitySolidAwardYardBiz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import serviceVo.ActivitySolidAwardYardVo;
 
 @RestController
 @RequestMapping("/activity/yard")
