@@ -26,6 +26,5 @@ public class ActivitySolidAwardYardController extends ActivitySolidAwardYardBiz 
     @DeleteMapping("deleteYard")
     public void deleteYard(@RequestParam ActivitySolidAwardYard activitySolidAwardYard){
         awardYardBiz.deleteYard(activitySolidAwardYard);
-       // return null;
     }
 }
