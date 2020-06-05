@@ -53,7 +53,7 @@ public class ActivitySolidAwardBiz  {
             throw new ServiceException("奖品名称不为空");
         }
         //preissueNum
-        if (activitySolidAward.getPreissueNum() == null) {
+        if (activitySolidAward.getPreissueNum() == null || activitySolidAward.getPreissueNum() <= 0) {
             throw new ServiceException("预发数量不为空");
         }
         //预发数量==剩余数量
@@ -86,7 +86,7 @@ public class ActivitySolidAwardBiz  {
         if (activitySolidAward.getStartTime() == null) {
             throw new ServiceException("兑换开始时间");
         }
-        if (activitySolidAward.getEndTime() == null) {
+        if (activitySolidAward.getEndTime() == null || activitySolidAward.getEndTime().before(activitySolidAward.getStartTime())) {
             throw new ServiceException("兑换结束时间");
         }
         //兑换码类型 1. 系统兑换码 2. 视频会员兑换码
