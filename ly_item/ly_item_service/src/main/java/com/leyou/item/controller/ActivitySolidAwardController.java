@@ -5,6 +5,8 @@ import com.leyou.item.entity.ActivitySolidAward;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/activity/award")
 public class ActivitySolidAwardController extends ActivitySolidAwardBiz {
@@ -12,7 +14,7 @@ public class ActivitySolidAwardController extends ActivitySolidAwardBiz {
     private ActivitySolidAwardBiz activitySolidAwardBiz;
 
     @GetMapping("/find")
-    public String findAward(@RequestParam ActivitySolidAward activitySolidAward){
+    public List<String> findAward(@RequestParam ActivitySolidAward activitySolidAward){
         return  activitySolidAwardBiz.findAward(activitySolidAward);
 
     }

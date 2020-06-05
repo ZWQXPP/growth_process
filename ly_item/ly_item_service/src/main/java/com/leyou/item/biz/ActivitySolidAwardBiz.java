@@ -1,6 +1,5 @@
 package com.leyou.item.biz;
 
-import com.google.gson.Gson;
 import com.leyou.common.exception.ServiceException;
 import com.leyou.common.utils.StringUtils;
 import com.leyou.common.utils.UUIDUtils;
@@ -21,15 +20,16 @@ public class ActivitySolidAwardBiz  {
     @Autowired
     private ActivitySolidAwardMapper activitySolidAwardMapper;
 
-    public String findAward(ActivitySolidAward activitySolidAward) {
+    public List<String> findAward(ActivitySolidAward activitySolidAward) {
         List<ActivitySolidAward> aa =   this.activitySolidAwardMapper.selectAward(activitySolidAward);
         List<String> list = new ArrayList<>();
         for (ActivitySolidAward award : aa) {
             String id = award.getId();
             list.add(id);
         }
-        String a = new Gson().toJson(list);
-        return a;
+      //  String a = new Gson().toJson(list);
+        // return  JsonUtils.toString(list);
+        return list;
     }
 
     /**

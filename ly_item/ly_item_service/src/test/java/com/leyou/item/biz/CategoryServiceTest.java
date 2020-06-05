@@ -28,7 +28,7 @@ public class CategoryServiceTest {
     @Test
     public void findaa() {
         ActivitySolidAward award = new ActivitySolidAward();
-        String aa =  activitySolidAwardBiz.findAward(award);
+        List<String> aa =  activitySolidAwardBiz.findAward(award);
         System.out.println(aa);
     }
 
