@@ -28,11 +28,6 @@ public class ActivitySolidAwardBiz  {
             String id = award.getId();
             list.add(id);
         }
-/**
- * List<User> UserList = userMapper.selectAllUser();
- * List<String> userIdList = UserList.stream().map(User::getUserId).collect(Collectors.toList());
- */
-
         String a = new Gson().toJson(list);
         return a;
     }
