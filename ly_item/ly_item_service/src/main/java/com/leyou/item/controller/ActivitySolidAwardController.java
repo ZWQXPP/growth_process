@@ -12,9 +12,9 @@ public class ActivitySolidAwardController extends ActivitySolidAwardBiz {
     private ActivitySolidAwardBiz activitySolidAwardBiz;
 
     @GetMapping("/find")
-    public ActivitySolidAward findAward(@RequestParam String id){
-        ActivitySolidAward award = activitySolidAwardBiz.findAward(id);
-        return award;
+    public String findAward(@RequestParam ActivitySolidAward activitySolidAward){
+        return  activitySolidAwardBiz.findAward(activitySolidAward);
+
     }
     /**
      * @Description: 奖品添加
@@ -37,5 +37,4 @@ public class ActivitySolidAwardController extends ActivitySolidAwardBiz {
 
         System.out.println("测试001"+activitySolidAward);
     }
-
 }

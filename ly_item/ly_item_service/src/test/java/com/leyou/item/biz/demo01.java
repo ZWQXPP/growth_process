@@ -22,8 +22,9 @@ public class demo01 {
     @Test
     public void demo02(){
         for (int i = 0; i < 5; i++) {
-            int max=10,min=1;
-            int ran2 = (int) (Math.random()*(max-min)+min);
+            double max=10.0;
+            double min=1.0;
+            double ran2 = (int) (Math.random()*(max-min)+min);
             System.out.println(ran2);
         }
     }

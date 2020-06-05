@@ -1,5 +1,6 @@
 package com.leyou.item.biz;
 
+import com.google.gson.Gson;
 import com.leyou.LyItemApplication;
 import com.leyou.item.entity.ActivitySolidAward;
 import com.leyou.item.entity.ActivitySolidAwardYard;
@@ -26,9 +27,11 @@ public class CategoryServiceTest {
 
     @Test
     public void findaa() {
-        ActivitySolidAward aa = activitySolidAwardBiz.findAward("654a161bed9645fcb7ccd8c916b838b7");
+        ActivitySolidAward award = new ActivitySolidAward();
+        String aa =  activitySolidAwardBiz.findAward(award);
         System.out.println(aa);
     }
+
     @Test
     public void deleteYard() {
         ActivitySolidAwardYard award = new ActivitySolidAwardYard();

@@ -4,7 +4,9 @@
 
     <select id="selectAward" resultType="com.leyou.item.entity.ActivitySolidAward">
         SELECT * FROM  activity_solid_award WHERE deleted = 0
-            and id= #{id}
+        <if test="params.id != null and params.id != '' ">
+            and id= #{params.id}
+        </if>
 
     </select>
 

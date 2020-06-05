@@ -1,5 +1,6 @@
 package com.leyou.item.biz;
 
+import com.google.gson.Gson;
 import com.leyou.common.exception.ServiceException;
 import com.leyou.common.utils.StringUtils;
 import com.leyou.common.utils.UUIDUtils;
@@ -10,7 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -18,8 +21,20 @@ public class ActivitySolidAwardBiz  {
     @Autowired
     private ActivitySolidAwardMapper activitySolidAwardMapper;
 
-    public ActivitySolidAward findAward(String id) {
-        return this.activitySolidAwardMapper.selectAward(id);
+    public String findAward(ActivitySolidAward activitySolidAward) {
+        List<ActivitySolidAward> aa =   this.activitySolidAwardMapper.selectAward(activitySolidAward);
+        List<String> list = new ArrayList<>();
+        for (ActivitySolidAward award : aa) {
+            String id = award.getId();
+            list.add(id);
+        }
+/**
+ * List<User> UserList = userMapper.selectAllUser();
+ * List<String> userIdList = UserList.stream().map(User::getUserId).collect(Collectors.toList());
+ */
+
+        String a = new Gson().toJson(list);
+        return a;
     }
 
     /**
