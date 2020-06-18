@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @ClassName: ActivitySolidAwardYard
@@ -63,5 +64,7 @@ public class ActivitySolidAwardYardVo {
     private String updatedBy;
 
     private Boolean deleted;
+
+    private List<String> ids;
 
 }

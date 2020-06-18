@@ -5,5 +5,13 @@
     <delete id="deleteYard" parameterType="com.leyou.item.entity.ActivitySolidAwardYard">
         DELETE FROM activity_solid_award_yard WHERE activity_solid_award_id = #{params.activitySolidAwardId}
     </delete>
+
+    <select id="findSolidAwardYardList" resultType="serviceVo.ActivitySolidAwardYardVo">
+        select * from activity_solid_award_yard  where deleted = 0
+        <if test=" id != null and id !=''">
+            id = #{id}
+        </if>
+
+    </select>
 </mapper>  
     

@@ -34,15 +34,16 @@ public class CategoryServiceTest {
 
     @Test
     public void deleteYard() {
-        ActivitySolidAwardYard award = new ActivitySolidAwardYard();
-        award.setActivitySolidAwardId("1456711221");
-        activitySolidAwardYardBiz.deleteYard(award);
+       /* ActivitySolidAwardYard award = new ActivitySolidAwardYard();
+        award.setActivitySolidAwardId("1456711221");*/
+        activitySolidAwardYardBiz.findSolidAwardYardList("");
+
     }
 
     @Test
     public void addYard() {
         ActivitySolidAwardYardVo activitySolidAwardYard = new ActivitySolidAwardYardVo();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 8; i++) {
             activitySolidAwardYard.setId("363f60fe4ab2e0c3a7f9a332");
             activitySolidAwardYard.setActivitySolidAwardId("1456711221");
             activitySolidAwardYard.setActivitySolidYard("aac11chdcss");

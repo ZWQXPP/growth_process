@@ -12,7 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import serviceVo.ActivitySolidAwardYardVo;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ActivitySolidAwardYardBiz extends BaseBiz<ActivitySolidAwardYardMapper,ActivitySolidAwardYard> {
@@ -75,5 +78,18 @@ public class ActivitySolidAwardYardBiz extends BaseBiz<ActivitySolidAwardYardMap
     public void deleteYard(ActivitySolidAwardYard activitySolidAwardYard) {
         awardYardMapper.deleteYard(activitySolidAwardYard);
 
+    }
+
+    public List<String> findSolidAwardYardList(String id) {
+
+        List<ActivitySolidAwardYardVo> vos = this.mapper.findSolidAwardYardList(id);
+
+        List<String> ids = vos.stream().map(ActivitySolidAwardYardVo::getId).collect(Collectors.toList());
+       /* List<String> ids = new ArrayList<>();
+        for (ActivitySolidAwardYardVo vo : vos) {
+                ids.add(vo.getId());
+        }*/
+
+        return ids;
     }
 }
