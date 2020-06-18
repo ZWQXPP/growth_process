@@ -54,8 +54,8 @@ public class CategoryServiceTest {
     @Test
     public void addAward(){
         ActivitySolidAward award = new ActivitySolidAward();
-        award.setName("夹心面包");
-        award.setPreissueNum(188);
+        award.setName("面包");
+        award.setPreissueNum(18);
         award.setPrice(new BigDecimal("50"));
         award.setImageUrls("na34yhyygq23uuvhf");
         award.setType(3);
@@ -64,8 +64,8 @@ public class CategoryServiceTest {
         award.setVideoPlatform(2);
         award.setTypeTime(2);
         award.setStartTime(new Date());
-        award.setCreatedBy("尊上");
-        award.setUpdatedBy("一一");
+        /*award.setCreatedBy("尊上");
+        award.setUpdatedBy("一一");*/
         //时间推一个月
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date();

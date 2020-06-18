@@ -1,6 +1,7 @@
 package com.leyou.item.biz;
 
 import com.leyou.common.exception.ServiceException;
+import com.leyou.common.utils.EntityUtils;
 import com.leyou.common.utils.StringUtils;
 import com.leyou.common.utils.UUIDUtils;
 import com.leyou.item.entity.ActivitySolidAward;
@@ -40,15 +41,13 @@ public class ActivitySolidAwardBiz  {
      */
     public void andAward(ActivitySolidAward activitySolidAward) {
         checkAward(activitySolidAward);
-        activitySolidAward.setDeleted(false);
-        activitySolidAward.setUpdatedTime(new Date());
-        activitySolidAward.setCreatedTime(new Date());
+        EntityUtils.setCreatAndUpdatInfo(activitySolidAward);
+
         activitySolidAwardMapper.insertSelective(activitySolidAward);
     }
 
     private void checkAward(ActivitySolidAward activitySolidAward) {
         //较验
-        activitySolidAward.setId(UUIDUtils.generateUuid());
         if (StringUtils.isBlank(activitySolidAward.getName())) {
             throw new ServiceException("奖品名称不为空");
         }
@@ -91,12 +90,7 @@ public class ActivitySolidAwardBiz  {
         }
         //兑换码类型 1. 系统兑换码 2. 视频会员兑换码
         activitySolidAward.setRedeemCodeType(1);
-        if (StringUtils.isBlank(activitySolidAward.getCreatedBy())) {
-            throw new ServiceException("创建人不为空");
-        }
-        if (StringUtils.isBlank(activitySolidAward.getUpdatedBy())) {
-            throw new ServiceException("修改人不为空");
-        }
+
 
     }
 
