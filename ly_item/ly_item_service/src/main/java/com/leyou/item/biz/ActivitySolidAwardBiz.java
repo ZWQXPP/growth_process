@@ -1,5 +1,6 @@
 package com.leyou.item.biz;
 
+import com.leyou.common.biz.BaseBiz;
 import com.leyou.common.exception.ServiceException;
 import com.leyou.common.utils.EntityUtils;
 import com.leyou.common.utils.StringUtils;
@@ -16,7 +17,7 @@ import java.util.*;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
-public class ActivitySolidAwardBiz  {
+public class ActivitySolidAwardBiz extends BaseBiz<ActivitySolidAwardMapper,ActivitySolidAward> {
     @Autowired
     private ActivitySolidAwardMapper activitySolidAwardMapper;
 

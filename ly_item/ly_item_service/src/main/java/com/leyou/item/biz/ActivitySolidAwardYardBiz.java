@@ -1,5 +1,6 @@
 package com.leyou.item.biz;
 
+import com.leyou.common.biz.BaseBiz;
 import com.leyou.common.exception.ServiceException;
 import com.leyou.common.utils.StringUtils;
 import com.leyou.common.utils.UUIDUtils;
@@ -14,7 +15,7 @@ import serviceVo.ActivitySolidAwardYardVo;
 import java.util.Date;
 
 @Service
-public class ActivitySolidAwardYardBiz {
+public class ActivitySolidAwardYardBiz extends BaseBiz<ActivitySolidAwardYardMapper,ActivitySolidAwardYard> {
 
     @Autowired
     private ActivitySolidAwardYardMapper awardYardMapper;

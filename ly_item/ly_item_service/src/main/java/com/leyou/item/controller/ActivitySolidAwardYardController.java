@@ -1,5 +1,6 @@
 package com.leyou.item.controller;
 
+import com.leyou.common.rest.BaseController;
 import com.leyou.item.biz.ActivitySolidAwardYardBiz;
 import com.leyou.item.entity.ActivitySolidAwardYard;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,7 @@ import serviceVo.ActivitySolidAwardYardVo;
 
 @RestController
 @RequestMapping("/activity/yard")
-public class ActivitySolidAwardYardController extends ActivitySolidAwardYardBiz {
+public class ActivitySolidAwardYardController extends BaseController<ActivitySolidAwardYardBiz,ActivitySolidAwardYard> {
 
     @Autowired
     private ActivitySolidAwardYardBiz awardYardBiz;
