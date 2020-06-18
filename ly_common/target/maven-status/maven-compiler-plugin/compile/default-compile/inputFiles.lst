@@ -22,6 +22,7 @@ D:\ly_parent\ly_common\src\main\java\com\leyou\common\msg\auth\ClientTokenErrorR
 D:\ly_parent\ly_common\src\main\java\com\leyou\common\exception\BaseException.java
 D:\ly_parent\ly_common\src\main\java\com\leyou\common\utils\ReflectionUtils.java
 D:\ly_parent\ly_common\src\main\java\com\leyou\common\utils\CookieUtils.java
+D:\ly_parent\ly_common\src\main\java\com\leyou\common\utils\Query.java
 D:\ly_parent\ly_common\src\main\java\com\leyou\common\msg\auth\HotelTokenErrorResponse.java
 D:\ly_parent\ly_common\src\main\java\com\leyou\common\enums\ExceptionEnum.java
 D:\ly_parent\ly_common\src\main\java\com\leyou\common\msg\v2\enums\ResponseType.java

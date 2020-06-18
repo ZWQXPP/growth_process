@@ -3,6 +3,7 @@ package com.leyou.common.biz;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.leyou.common.annotation.Wildcard;
 import com.leyou.common.mapper.BaseMapper;
 
 import com.leyou.common.msg.TableResultResponse;
@@ -10,7 +11,6 @@ import com.leyou.common.utils.ArrayUtils;
 import com.leyou.common.utils.EntityUtils;
 import com.leyou.common.utils.Query;
 import com.leyou.common.utils.StringUtils;
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.Wildcard;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 
@@ -122,7 +122,7 @@ public abstract class BaseBiz<M extends BaseMapper<T>, T> {
         Set<String> wildSet = new HashSet<>();
         Field[] fields = clazz.getDeclaredFields();
         for(Field field : fields){
-            if(field.isAnnotationPresent((Class<? extends Annotation>) Wildcard.class)){
+            if(field.isAnnotationPresent(Wildcard.class)){
                 wildSet.add(field.getName());
             }
         }

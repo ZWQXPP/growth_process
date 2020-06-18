@@ -11,9 +11,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -47,6 +46,7 @@ public class ActivitySolidAwardBiz  {
     }
 
     private void checkAward(ActivitySolidAward activitySolidAward) {
+        activitySolidAward.setId(UUIDUtils.generateUuid());
         //较验
         if (StringUtils.isBlank(activitySolidAward.getName())) {
             throw new ServiceException("奖品名称不为空");
@@ -85,9 +85,16 @@ public class ActivitySolidAwardBiz  {
         if (activitySolidAward.getStartTime() == null) {
             throw new ServiceException("兑换开始时间");
         }
-        if (activitySolidAward.getEndTime() == null || activitySolidAward.getEndTime().before(activitySolidAward.getStartTime())) {
-            throw new ServiceException("兑换结束时间");
-        }
+
+        //时间推一个月
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(date);
+        calendar.add(Calendar.MONTH, 1); //把日期往后增加一个月，整数往后推，负数往前移
+        date = calendar.getTime();
+        // String stringDate = sdf.format(date);//date-->String
+        activitySolidAward.setEndTime(date);
         //兑换码类型 1. 系统兑换码 2. 视频会员兑换码
         activitySolidAward.setRedeemCodeType(1);
 
