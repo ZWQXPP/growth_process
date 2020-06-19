@@ -83,12 +83,16 @@ public class ActivitySolidAwardYardBiz extends BaseBiz<ActivitySolidAwardYardMap
     public List<String> findSolidAwardYardList(String id) {
 
         List<ActivitySolidAwardYardVo> vos = this.mapper.findSolidAwardYardList(id);
-
-        List<String> ids = vos.stream().map(ActivitySolidAwardYardVo::getId).collect(Collectors.toList());
+        List<String> ids = new ArrayList<>();
+      // List<String> ids = vos.stream().map(ActivitySolidAwardYardVo::getId).collect(Collectors.toList());
        /* List<String> ids = new ArrayList<>();
         for (ActivitySolidAwardYardVo vo : vos) {
                 ids.add(vo.getId());
         }*/
+
+        vos.forEach(item -> {
+            ids.add(item.getId());
+        });
 
         return ids;
     }

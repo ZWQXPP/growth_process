@@ -1,9 +1,12 @@
 package com.leyou.item.biz;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.leyou.LyItemApplication;
+import com.leyou.common.utils.JsonUtils;
 import com.leyou.item.entity.ActivitySolidAward;
 import com.leyou.item.entity.ActivitySolidAwardYard;
+import com.leyou.item.mapper.ActivitySolidAwardYardMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +17,7 @@ import serviceVo.ActivitySolidAwardYardVo;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = LyItemApplication.class)
@@ -24,6 +28,8 @@ public class CategoryServiceTest {
     private ActivitySolidAwardBiz activitySolidAwardBiz;
     @Autowired
     private ActivitySolidAwardYardBiz activitySolidAwardYardBiz;
+    @Autowired
+    private ActivitySolidAwardYardMapper activitySolidAwardYardMapper;
 
     @Test
     public void findaa() {
@@ -36,7 +42,14 @@ public class CategoryServiceTest {
     public void deleteYard() {
        /* ActivitySolidAwardYard award = new ActivitySolidAwardYard();
         award.setActivitySolidAwardId("1456711221");*/
-        activitySolidAwardYardBiz.findSolidAwardYardList("");
+        List<ActivitySolidAwardYardVo> vos =  activitySolidAwardYardMapper.findSolidAwardYardList("");
+      //  List<ActivitySolidAwardYardVo> vos = activitySolidAwardYardBiz.findSolidAwardYardList("");
+         List<String> ids = vos.stream().map(ActivitySolidAwardYardVo::getId).collect(Collectors.toList());
+        //List<String> ids = new ArrayList<>();
+       /* vos.forEach(item -> {
+            ids.add(item.getId());
+        });*/
+        System.out.println(JsonUtils.toString(ids));
 
     }
 
