@@ -13,5 +13,9 @@
         </if>
 
     </select>
+
+    <select id="yardList" resultType="serviceVo.ActivitySolidAwardYardVo">
+        select * from activity_solid_award_yard where deleted = 0
+    </select>
 </mapper>  
     

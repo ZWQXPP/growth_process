@@ -48,5 +48,18 @@ public class ActivitySolidAwardYardController extends BaseController<ActivitySol
         List<String> list = this.baseBiz.findSolidAwardYardList(id);
         return new TableResultResponse(result.getTotal(), list);
     }
-    
+
+    /**
+     * @Description: 列表
+     * @param:
+     * @auther: zwq
+     * @date: 2020/7/22 0022 下午 2:47
+     */
+    @GetMapping("/yardList")
+    public ObjectRestResponse yardList(@RequestParam ActivitySolidAwardYardVo activitySolidAwardYardVo){
+        ObjectRestResponse restResponse = new ObjectRestResponse();
+
+        restResponse.setData(this.awardYardBiz.yardList(activitySolidAwardYardVo));
+        return restResponse;
+    }
 }

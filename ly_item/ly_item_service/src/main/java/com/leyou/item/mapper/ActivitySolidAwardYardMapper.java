@@ -12,4 +12,6 @@ public interface ActivitySolidAwardYardMapper extends BaseMapper<ActivitySolidAw
     void deleteYard(@Param("params")ActivitySolidAwardYard activitySolidAwardYard);
 
     List<ActivitySolidAwardYardVo> findSolidAwardYardList(@Param("id")String id);
+
+    List<ActivitySolidAwardYardVo> yardList(@Param("vo")ActivitySolidAwardYardVo activitySolidAwardYardVo);
 }

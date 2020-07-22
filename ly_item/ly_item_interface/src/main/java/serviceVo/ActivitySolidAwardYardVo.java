@@ -12,7 +12,7 @@ import java.util.List;
  * @date 2020/3/13
  */
 @Data
-public class ActivitySolidAwardYardVo {
+public class ActivitySolidAwardYardVo extends BaseVo{
 
     /**
      * @Fields  : ID

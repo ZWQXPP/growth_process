@@ -93,4 +93,12 @@ public class CategoryServiceTest {
         }
 
 
+     @Test
+    public void  yardList(){
+         ActivitySolidAwardYardVo activitySolidAwardYardVo = new ActivitySolidAwardYardVo();
+         List<ActivitySolidAwardYardVo> list = activitySolidAwardYardBiz.yardList(activitySolidAwardYardVo);
+         System.out.println(JsonUtils.toString(list));
+     }
+
+
 }

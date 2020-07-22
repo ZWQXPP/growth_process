@@ -15,7 +15,6 @@ import serviceVo.ActivitySolidAwardYardVo;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class ActivitySolidAwardYardBiz extends BaseBiz<ActivitySolidAwardYardMapper,ActivitySolidAwardYard> {
@@ -94,5 +93,11 @@ public class ActivitySolidAwardYardBiz extends BaseBiz<ActivitySolidAwardYardMap
         });
 
         return ids;
+    }
+
+    public List<ActivitySolidAwardYardVo> yardList(ActivitySolidAwardYardVo activitySolidAwardYardVo) {
+        List<ActivitySolidAwardYardVo> list = null;
+        list = this.awardYardMapper.yardList(activitySolidAwardYardVo);
+        return list;
     }
 }
