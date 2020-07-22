@@ -44,11 +44,12 @@ public class CategoryServiceTest {
         award.setActivitySolidAwardId("1456711221");*/
         List<ActivitySolidAwardYardVo> vos =  activitySolidAwardYardMapper.findSolidAwardYardList("");
       //  List<ActivitySolidAwardYardVo> vos = activitySolidAwardYardBiz.findSolidAwardYardList("");
-         List<String> ids = vos.stream().map(ActivitySolidAwardYardVo::getId).collect(Collectors.toList());
-        //List<String> ids = new ArrayList<>();
-       /* vos.forEach(item -> {
+       //  List<String> ids = vos.stream().map(ActivitySolidAwardYardVo::getId).collect(Collectors.toList());
+        List<String> ids = new ArrayList<>();
+        vos.forEach(item -> {
             ids.add(item.getId());
-        });*/
+        });
+        System.out.println(vos);
         System.out.println(JsonUtils.toString(ids));
 
     }
@@ -78,8 +79,6 @@ public class CategoryServiceTest {
         award.setVideoPlatform(2);
         award.setTypeTime(2);
         award.setStartTime(new Date());
-        /*award.setCreatedBy("尊上");
-        award.setUpdatedBy("一一");*/
         activitySolidAwardBiz.andAward(award);
     }
 

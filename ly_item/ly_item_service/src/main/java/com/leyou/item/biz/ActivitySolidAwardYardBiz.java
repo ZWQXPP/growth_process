@@ -71,7 +71,6 @@ public class ActivitySolidAwardYardBiz extends BaseBiz<ActivitySolidAwardYardMap
         awardYard.setId(activitySolidAwardYardVo.getId());
         awardYard.setType(activitySolidAwardYardVo.getType());
         awardYardMapper.updateByPrimaryKeySelective(awardYard);
-
     }
 
 
