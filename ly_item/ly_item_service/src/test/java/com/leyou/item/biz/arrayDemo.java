@@ -6,7 +6,7 @@ public class arrayDemo {
 
 
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         int[] nums = new int[]{61, 23, 4, 74, 13, 148, 20};
 
         int max = nums[0]; // 假定最大值为数组中的第一个元素
@@ -33,5 +33,32 @@ public class arrayDemo {
         System.out.println("数组中的最大值：" + max);
         System.out.println("数组中的最小值：" + min);
         System.out.println("数组中的平均值：" + avg);
+    }
+
+
+    public static void main(String[] args) {
+       /* StringBuffer sb = new StringBuffer();
+        sb.append("This is a StringBuffer!");
+        sb.append(", =");
+        sb.append("This is a StringBuffer!");
+        System.out.println(sb.toString());
+
+        StringBuffer sb1 = new StringBuffer("This is a StringBuffer!");
+        System.out.println("=================================");
+        sb1.delete(0, 5);
+       // sb1.deleteCharAt(sb1.length() - 1);
+        System.out.println(sb1.toString());*/
+
+        StringBuffer sb = new StringBuffer("This is a StringBuffer!");
+        // 能够在指定位置插入字符、字符数组、字符串以及各种数字和布尔值
+        sb.insert(2, 'W');
+        sb.insert(3, new char[] { 'A', 'B', 'C' });
+        sb.insert(8, "abc");
+        sb.insert(2, 3);
+        sb.insert(3, 2.3f);
+        sb.insert(6, 3.75d);
+        sb.insert(5, 9843L);
+        sb.insert(2, true);
+        System.out.println("testInsert: " + sb.toString());
     }
 }
