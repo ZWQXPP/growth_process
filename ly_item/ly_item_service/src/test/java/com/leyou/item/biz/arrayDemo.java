@@ -6,7 +6,7 @@ public class arrayDemo {
 
 
 
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         int[] nums = new int[]{61, 23, 4, 74, 13, 148, 20};
 
         int max = nums[0]; // 假定最大值为数组中的第一个元素
@@ -27,6 +27,18 @@ public class arrayDemo {
             // 累加求和
             sum = sum + nums[i];
         }
+
+        //排序
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = 0; j < nums.length - i; j++) {
+                if(nums[j] > nums[j+1]){
+                    int temp = nums[j];
+                    nums[j] = nums[j+1];
+                    nums[j+1] = temp;
+                }
+            }
+        }
+        System.out.println("数组排序：" + JsonUtils.toString(nums));
         // 求平均值
         avg = sum / (nums.length);
         System.out.println(JsonUtils.toString(nums));
@@ -36,7 +48,7 @@ public class arrayDemo {
     }
 
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
        /* StringBuffer sb = new StringBuffer();
         sb.append("This is a StringBuffer!");
         sb.append(", =");

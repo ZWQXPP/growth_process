@@ -9,7 +9,7 @@ import java.util.*;
 
 public class demo03 {
 
-    public static void main2(String[] args) {
+    public static void main(String[] args) {
         String beginTime = "2018-07-30 14:42:32";
         String endTime = "2018-07-29 12:26:32";
 
@@ -28,7 +28,7 @@ public class demo03 {
         }
     }
 
-    public static void main1(String[] args) {
+    public static void main9(String[] args) {
 
 
         BigDecimal a = new BigDecimal(111);
@@ -63,7 +63,7 @@ public class demo03 {
     }
 
 
-    public static void main(String[] args) {
+    public static void main7(String[] args) {
         //创建map集合
         //Map<String,String> map = new HashMap<String,String>();
         //Map<String,String> map = new LinkedHashMap<String,String>();
@@ -86,7 +86,7 @@ public class demo03 {
         System.out.println(map.size()+1);   //输出map集合的大小
         System.out.println(map.keySet());  //输出所有的key值
         System.out.println(map.values());  //输出所有的value值
-        System.out.println(map);   //输出所有的键值对。
+        System.out.println("输出所有的键值对  " + JsonUtils.toString(map) );   //输出所有的键值对。
         System.out.println(map.entrySet());  //输出所有的键值对。
     }
 }

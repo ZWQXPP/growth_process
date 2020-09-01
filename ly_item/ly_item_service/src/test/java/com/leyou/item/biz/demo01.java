@@ -1,6 +1,5 @@
 package com.leyou.item.biz;
 
-import com.leyou.LyItemApplication;
 import com.leyou.common.utils.JsonUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,9 +17,10 @@ public class demo01 {
     private ActivitySolidAwardYardBiz activitySolidAwardYardBiz;
     @Test
     public void demo01() {
-        Random r = new Random(1);
+        Random r = new Random();
         int ran1 = r.nextInt(10);
         System.out.println(ran1);
+
     }
 
     @Test
@@ -29,6 +29,7 @@ public class demo01 {
             double max = 10.0;
             double min = 1.0;
             double ran2 = (int) (Math.random() * (max - min) + min);
+
             System.out.println(ran2);
         }
     }
@@ -45,7 +46,7 @@ public class demo01 {
     @Test
     public void demo04() {
         List<Map<String, Object>> list = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 8; i++) {
             Map<String, Object> map = new HashMap<>();
             map.put("type", i);
             list.add(map);
