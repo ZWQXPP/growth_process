@@ -28,6 +28,10 @@ public class ActivitySolidAwardBiz extends BaseBiz<ActivitySolidAwardMapper,Acti
             String id = award.getId();
             list.add(id);
         }
+        for (ActivitySolidAward award : aa) {
+            String id = award.getId();
+            list.add(id);
+        }
       //  String a = new Gson().toJson(list);
         // return  JsonUtils.toString(list);
         return list;
