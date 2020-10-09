@@ -7,6 +7,7 @@ import com.leyou.common.utils.JsonUtils;
 import com.leyou.item.entity.ActivitySolidAward;
 import com.leyou.item.entity.ActivitySolidAwardYard;
 import com.leyou.item.mapper.ActivitySolidAwardYardMapper;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -100,5 +101,9 @@ public class CategoryServiceTest {
          System.out.println(JsonUtils.toString(list));
      }
 
-
+    @Test
+    public void demo01() {
+        BigDecimal a = BigDecimal.ZERO;
+        System.out.println(a);
+    }
 }

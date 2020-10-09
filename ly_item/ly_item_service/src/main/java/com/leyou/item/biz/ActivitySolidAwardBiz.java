@@ -46,8 +46,7 @@ public class ActivitySolidAwardBiz extends BaseBiz<ActivitySolidAwardMapper,Acti
     public void andAward(ActivitySolidAward activitySolidAward) {
         checkAward(activitySolidAward);
         EntityUtils.setCreatAndUpdatInfo(activitySolidAward);
-
-        activitySolidAwardMapper.insertSelective(activitySolidAward);
+        this.insertSelective(activitySolidAward);
     }
 
     private void checkAward(ActivitySolidAward activitySolidAward) {
