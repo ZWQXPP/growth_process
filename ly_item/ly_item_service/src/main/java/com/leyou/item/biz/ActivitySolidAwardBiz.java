@@ -50,6 +50,9 @@ public class ActivitySolidAwardBiz extends BaseBiz<ActivitySolidAwardMapper,Acti
     }
 
     private void checkAward(ActivitySolidAward activitySolidAward) {
+
+
+
         activitySolidAward.setId(UUIDUtils.generateUuid());
         //较验
         if (StringUtils.isBlank(activitySolidAward.getName())) {
