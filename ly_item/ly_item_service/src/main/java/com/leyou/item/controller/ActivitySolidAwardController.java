@@ -1,11 +1,16 @@
 package com.leyou.item.controller;
 
 import com.leyou.common.rest.BaseController;
+import com.leyou.common.utils.DateUtils;
+import com.leyou.common.utils.ExcelUtil;
 import com.leyou.item.biz.ActivitySolidAwardBiz;
 import com.leyou.item.entity.ActivitySolidAward;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import serviceVo.ActivitySolidAwardVo;
 
+import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -40,4 +45,26 @@ public class ActivitySolidAwardController extends BaseController<ActivitySolidAw
 
         System.out.println("测试001"+activitySolidAward);
     }
+
+    @PostMapping("/export")
+    public void productExport(@RequestBody ActivitySolidAwardVo activitySolidAward, HttpServletResponse response){
+        String ids = "654a161bed9645fcb7ccd8c916b838b7";
+        activitySolidAward.setIds(ids);
+        List<ActivitySolidAwardVo> vos = activitySolidAwardBiz.selectAwardListByIds(activitySolidAward.getIds());
+        List<List<Object>> exportData = new ArrayList<List<Object>>();
+        for (ActivitySolidAwardVo vo :vos){
+            List<Object> dataList = new ArrayList<>();
+
+            dataList.add(vo.getName());
+            dataList.add(vo.hashCode());
+            exportData.add(dataList);
+        }
+        List<String> headerList = new ArrayList<String>();
+        headerList.add("奖品名称");
+        headerList.add("奖品编号");
+        ExcelUtil.createExcel(exportData,headerList,"商品列表",response);
+    }
+
+
+
 }

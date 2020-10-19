@@ -10,5 +10,13 @@
 
     </select>
 
+    <select id="selectAwardListByIds" resultType="serviceVo.ActivitySolidAwardVo">
+        select * from activity_solid_award
+        where id in
+        <foreach collection="ids" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
 </mapper>  
     

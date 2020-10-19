@@ -10,6 +10,7 @@ import com.leyou.item.mapper.ActivitySolidAwardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import serviceVo.ActivitySolidAwardVo;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -105,4 +106,8 @@ public class ActivitySolidAwardBiz extends BaseBiz<ActivitySolidAwardMapper,Acti
 
     }
 
+    public List<ActivitySolidAwardVo> selectAwardListByIds(String ids) {
+      //  String[] split = ids.split(",");
+        return this.mapper.selectAwardListByIds(ids);
+    }
 }

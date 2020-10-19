@@ -68,4 +68,9 @@ public class ActivitySolidAwardVo {
      * @Fields : 兑换结束时间
      */
     private Date endTime;
+
+    /**
+     * @Fields : 集合
+     */
+    private String ids = "654a161bed9645fcb7ccd8c916b838b7";
 }
