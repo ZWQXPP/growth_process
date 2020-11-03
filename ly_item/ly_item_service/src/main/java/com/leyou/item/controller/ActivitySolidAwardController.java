@@ -46,6 +46,8 @@ public class ActivitySolidAwardController extends BaseController<ActivitySolidAw
         System.out.println("测试001"+activitySolidAward);
     }
 
+
+
     @PostMapping("/export")
     public void productExport(@RequestBody ActivitySolidAwardVo activitySolidAward, HttpServletResponse response){
         String ids = "654a161bed9645fcb7ccd8c916b838b7";
@@ -65,6 +67,15 @@ public class ActivitySolidAwardController extends BaseController<ActivitySolidAw
         ExcelUtil.createExcel(exportData,headerList,"商品列表",response);
     }
 
+    /**
+     * @Description: 的方式度过
+     * @auther: zwq
+     * @date: 2020/6/1 0001 下午 4:16
+     */
+    @GetMapping
+    public void demo (@RequestParam ActivitySolidAward activitySolidAward){
 
+        System.out.println("测试001"+activitySolidAward);
+    }
 
 }
