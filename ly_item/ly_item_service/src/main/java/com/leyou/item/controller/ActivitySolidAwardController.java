@@ -56,7 +56,6 @@ public class ActivitySolidAwardController extends BaseController<ActivitySolidAw
         List<List<Object>> exportData = new ArrayList<List<Object>>();
         for (ActivitySolidAwardVo vo :vos){
             List<Object> dataList = new ArrayList<>();
-
             dataList.add(vo.getName());
             dataList.add(vo.hashCode());
             exportData.add(dataList);
